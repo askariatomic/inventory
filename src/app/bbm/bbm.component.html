@@ -1,0 +1,27 @@
+<h1>Bukti Barang Masuk</h1>
+
+<div class="alert alert-success" *ngIf='message'>{{ message }}</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Faktur BBM</th>
+                <th>ID BBM</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bbm of bbms">
+                <td>{{ bbm.bbmFaktur }}</td>
+                <td>{{ bbm.bbmNo }}</td>
+                <td><button class="btn btn-success">Update</button></td>
+                <td><button class="btn btn-warning">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <button class="btn btn-success">Add</button>
+    </div>
+</div>
